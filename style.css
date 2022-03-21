@@ -74,15 +74,32 @@ figcaption {
 
 /** Container styles to keep content from becoming too wide or coming too close to
 * mobile edge */
+.collage {
+    display: flex;   
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.collage > .img {
+    flex-basis: calc(50% - 2.5px) ;
+}
 
 .container {
     width: 100%;
-    max-width: 800px;
+    max-width: 800px; 
     padding: 10px;
     margin: 0 auto;
 }
 
+.container.image .caption,
+.container.image figcaption {
+    padding: 5px 10px;
+}
 
+.collage > .img:nth-child(1),
+.collage > .img:nth-child(2) {
+    margin-bottom: 5px ;
+}
 /** Images are allowed to be a little wider when broken out into their own container */
 
 .container.image {
