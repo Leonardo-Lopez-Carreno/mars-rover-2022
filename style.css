@@ -100,6 +100,14 @@ figcaption {
 .collage > .img:nth-child(2) {
     margin-bottom: 5px ;
 }
+
+.dot {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%; 
+    border: 2px solid white;
+    position: absolute;
+}
 /** Images are allowed to be a little wider when broken out into their own container */
 
 .container.image {
@@ -112,6 +120,101 @@ figcaption {
     padding: 5px 10px;
 }
 
+
+
+.close , .inner {
+    display: none;
+}
+
+.dot.active {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#camera:not(.active) {
+    top: 18%;
+    left: 29%;
+}
+.annotate {
+    position: relative;
+}
+
+.dot.active .close,
+.dot.active .inner {
+    display: block;
+}
+
+.close {
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    right: 10px;
+    top: 0px;
+}
+
+.dot.active {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 0;
+
+}
+
+.inner {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    padding: 10px;
+    transform: translateY(-50%);
+}
+.pink {
+    
+    background-color: rgba(233,150,164,0.65);
+
+}
+
+.green {
+    background-color: rgb(139, 184, 139, 0.65);
+}
+
+#moxie:not(.active) {
+    top: 60%;
+    left: 74%;
+}
+
+.purple {
+    background-color: rgba(235, 168, 235, 0.65);
+}
+
+#arm:not(.active) {
+    top: 48%;
+    left: 59%;
+}
+
+#wheels:not(.active) {
+    top: 60%;
+    left: 40%;
+}
+
+.red {
+    background-color: rgb(226, 77, 77, 0.65);
+}
+
+#battery:not(.active) {
+    top: 40%;
+    left: 14%;
+}
+
+.blue {
+    background-color: rgba(159, 219, 247, 0.65);
+}
 
 /*********************************************************************
   YOUR TABLET/DESKTOP STYLES GO HERE
